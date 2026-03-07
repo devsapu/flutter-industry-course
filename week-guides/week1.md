@@ -34,14 +34,20 @@ task_manager_app/
 week-1-practical/          ← Copy-paste examples for learning
 ├── README.md
 ├── 01_text_widget.dart
-├── 02_list_view.dart
-├── 03_theme.dart
-├── 04_buttons.dart
-├── 05_task_manager_main.dart   ← Task Manager main.dart
-└── home_page.dart             ← copy to lib/home_page.dart when using 05
+├── ...
+└── home_page.dart
+
+week-1-special-notes/      ← Diagrams & architecture (Virtual DOM, RN vs Flutter)
+├── README.md
+├── 01-virtual-dom.md
+├── 02-react-native-architecture.md
+├── 03-flutter-architecture.md
+└── 04-cross-platform-comparison.md
 ```
 
 **Initial vs Task Manager:** `task_manager_app/lib/main.dart` is kept at **initial level** (simple “Initial app” screen). There is no `lib/home_page.dart` by default—create it while teaching and explain it, or use the copy in `week-1-practical`. For the full Task Manager screen: copy `05_task_manager_main.dart` into `lib/main.dart` and `home_page.dart` into `lib/home_page.dart`. See `week-1-practical/README.md` for details.
+
+**Special notes:** For Virtual DOM, React Native and Flutter architecture (with diagrams), see `week-1-special-notes/README.md`.
 
 ## Student Exercises
 
