@@ -1,5 +1,5 @@
 // Copy this entire file into task_manager_app/lib/main.dart
-// This is the Task Manager version: MaterialApp + HomePage (uses lib/home_page.dart).
+// Also copy week-1-practical/home_page.dart to task_manager_app/lib/home_page.dart
 
 import 'package:flutter/material.dart';
 import 'home_page.dart';
@@ -20,7 +20,7 @@ class TaskManagerApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

@@ -20,7 +20,7 @@
    ```
 3. Create:
    - `lib/main.dart` – app entry, material app
-   - `lib/home_page.dart` – simple home screen
+   - `lib/home_page.dart` – create and explain during the lesson (or copy from `week-1-practical/home_page.dart`)
 4. **Demo:** Hot reload and hot restart
 
 ## Repo Structure (Week 1)
@@ -28,20 +28,20 @@
 ```
 task_manager_app/
 ├── lib/
-│   ├── main.dart
-│   └── home_page.dart
+│   └── main.dart          ← initial level only; no home_page.dart by default
 └── ...
 
-week-1-practical/          ← Copy-paste main.dart examples for learning
+week-1-practical/          ← Copy-paste examples for learning
 ├── README.md
 ├── 01_text_widget.dart
 ├── 02_list_view.dart
 ├── 03_theme.dart
 ├── 04_buttons.dart
-└── 05_task_manager_main.dart   ← Task Manager version (uses home_page.dart)
+├── 05_task_manager_main.dart   ← Task Manager main.dart
+└── home_page.dart             ← copy to lib/home_page.dart when using 05
 ```
 
-**Initial vs Task Manager:** `task_manager_app/lib/main.dart` is kept at **initial level** (simple “Initial app” screen) so the app looks minimal when first loaded. For the full Task Manager screen (welcome message, icon), copy `week-1-practical/05_task_manager_main.dart` into `task_manager_app/lib/main.dart`. See `week-1-practical/README.md` for all copy-paste examples.
+**Initial vs Task Manager:** `task_manager_app/lib/main.dart` is kept at **initial level** (simple “Initial app” screen). There is no `lib/home_page.dart` by default—create it while teaching and explain it, or use the copy in `week-1-practical`. For the full Task Manager screen: copy `05_task_manager_main.dart` into `lib/main.dart` and `home_page.dart` into `lib/home_page.dart`. See `week-1-practical/README.md` for details.
 
 ## Student Exercises
 

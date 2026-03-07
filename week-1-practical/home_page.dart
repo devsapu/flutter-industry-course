@@ -1,3 +1,6 @@
+// Copy this file to task_manager_app/lib/home_page.dart
+// Use with 05_task_manager_main.dart in main.dart (after creating/explaining HomePage in class)
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
