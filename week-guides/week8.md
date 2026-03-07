@@ -51,3 +51,7 @@ cd task_manager_app && flutter pub get && flutter run
 - A full task manager app with Clean Architecture
 - Experience with API, state management, performance, and production setup
 - A portfolio-ready repo and possibly PR-based workflow
+
+## Notes
+
+_(Add teaching notes, tips, and code snippets here.)_

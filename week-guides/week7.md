@@ -50,3 +50,7 @@ cd task_manager_app && flutter pub get && flutter run
 flutter build apk
 # APK: build/app/outputs/flutter-apk/app-release.apk
 ```
+
+## Notes
+
+_(Add teaching notes, tips, and code snippets here.)_

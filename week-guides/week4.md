@@ -55,3 +55,7 @@ lib/
 git checkout week-4
 cd task_manager_app && flutter pub get && flutter run
 ```
+
+## Notes
+
+_(Add teaching notes, tips, and code snippets here.)_

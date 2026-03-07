@@ -45,3 +45,7 @@ Same as Week 5; additions in:
 git checkout week-6
 cd task_manager_app && flutter pub get && flutter run
 ```
+
+## Notes
+
+_(Add teaching notes, tips, and code snippets here.)_
