@@ -31,7 +31,17 @@ task_manager_app/
 │   ├── main.dart
 │   └── home_page.dart
 └── ...
+
+week-1-practical/          ← Copy-paste main.dart examples for learning
+├── README.md
+├── 01_text_widget.dart
+├── 02_list_view.dart
+├── 03_theme.dart
+├── 04_buttons.dart
+└── 05_task_manager_main.dart   ← Task Manager version (uses home_page.dart)
 ```
+
+**Initial vs Task Manager:** `task_manager_app/lib/main.dart` is kept at **initial level** (simple “Initial app” screen) so the app looks minimal when first loaded. For the full Task Manager screen (welcome message, icon), copy `week-1-practical/05_task_manager_main.dart` into `task_manager_app/lib/main.dart`. See `week-1-practical/README.md` for all copy-paste examples.
 
 ## Student Exercises
 
@@ -125,3 +135,83 @@ Scaffold(
 ```
 
 Use `FloatingActionButton.small` or `.extended` for variants; wrap in `FloatingActionButton.extended` with a `label` for a FAB with text.
+
+### Adding a ListView
+
+A **ListView** scrolls a list of children vertically (or horizontally with `scrollDirection`). Use it when you have multiple items to show (e.g. a list of tasks).
+
+**Simple list with fixed children:** put a `ListView` in the body of your `Scaffold` and pass a `children` list. Do **not** mark the `Scaffold` as `const` when it contains a `ListView`—`ListView` is not a const constructor, so the parent cannot be const.
+
+```dart
+Scaffold(
+  appBar: AppBar(title: Text('Tasks')),
+  body: ListView(
+    children: const [
+      ListTile(title: Text('Task 1')),
+      ListTile(title: Text('Task 2')),
+      ListTile(title: Text('Task 3')),
+    ],
+  ),
+)
+```
+
+For a **long or dynamic list**, use `ListView.builder` so only visible items are built:
+
+```dart
+ListView.builder(
+  itemCount: items.length,
+  itemBuilder: (context, index) => ListTile(title: Text(items[index])),
+)
+```
+
+### Column
+
+**Column** arranges its children in a vertical line. Use `mainAxisAlignment` for vertical alignment and `crossAxisAlignment` for horizontal. Often used with **Row** (horizontal) for simple layouts.
+
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: const [
+    Text('First'),
+    Text('Second'),
+    Text('Third'),
+  ],
+)
+```
+
+### Widgets
+
+Flutter UIs are built from **widgets**. Everything is a widget: layout (Column, Row, Stack), display (Text, Image, Icon), and structure (Scaffold, Container). Widgets are either **StatelessWidget** (no internal state) or **StatefulWidget** (state that can change; use `setState()` to rebuild). Compose small widgets into larger ones.
+
+### Buttons
+
+Common button widgets:
+
+- **ElevatedButton** — filled button, primary actions
+- **TextButton** — text-only, secondary actions
+- **OutlinedButton** — border only
+- **IconButton** — icon only (e.g. in AppBar)
+- **FloatingActionButton** — floating circle (see note above)
+
+All need `onPressed` (use `null` to disable) and a `child` (or `icon`/`label` for some).
+
+```dart
+ElevatedButton(
+  onPressed: () { /* do something */ },
+  child: const Text('Submit'),
+)
+```
+
+### Layout
+
+**Layout** widgets control size and position of their children:
+
+- **Column** / **Row** — linear layout; use **Expanded** or **Flexible** so a child takes remaining space
+- **Stack** — overlap children (first at back, last on top); use **Positioned** for placement
+- **Center** — center one child
+- **Padding** — add space around a child
+- **Container** — box with optional decoration, padding, and constraints
+- **ListView** / **GridView** — scrollable lists (see ListView note above)
+
+Combine these to build screens; put layout widgets in the `body` of a **Scaffold**.
