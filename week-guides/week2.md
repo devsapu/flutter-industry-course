@@ -52,7 +52,7 @@ flutter test
 
 ## 1.5‑hour session (8 groups)
 
-For the hands-on part of the session, use:
+For the hands-on part of the session, use the **week2-group-activity** folder:
 
-- **Instructor:** **week2-session-guide.md** – timing, group–task mapping, tips.
-- **Groups 1–8:** **week2-group-1.md** … **week2-group-8.md** – one task per group (branch, change, commit, push, PR, CI).
+- **Instructor:** **week2-group-activity/week2-session-guide.md** – timing, group–task mapping, tips.
+- **Groups 1–8:** **week2-group-activity/week2-group-1.md** … **week2-group-8.md** – one task per group (branch, change, commit, push, PR, CI).
