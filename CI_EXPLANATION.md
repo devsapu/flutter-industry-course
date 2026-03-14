@@ -53,3 +53,6 @@ Automated tests and builds help teams:
 
 CI does not guarantee “no bugs”, but it catches many common problems early (broken builds, failed tests, analysis warnings/errors).
 
+---
+
+**For lecturers:** A longer teaching guide with the full CI/CD flow, CI vs CD, and live-demo tips is in **CICD_FOR_STUDENTS.md**.
