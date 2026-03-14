@@ -33,6 +33,8 @@ lib/
 
 ## 2. Creating a Simple UI Screen
 
+**See also:** **SCAFFOLD_AND_WIDGETS_NOTES.md** – what parameters Scaffold has (appBar, body, etc.) and the **child vs children** pattern (when to use `child:` and when to use `children:`).
+
 Example structure for a page:
 
 ```

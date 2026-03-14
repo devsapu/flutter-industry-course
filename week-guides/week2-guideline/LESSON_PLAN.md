@@ -78,6 +78,7 @@ This **lesson plan** gives the recommended order for the session: **Navigator fi
 | What you need | File or folder |
 |---------------|-----------------|
 | Navigator theory + minimal demo code | **NAVIGATOR_NOTES.md** |
+| Scaffold parameters, child vs children, layout pattern | **SCAFFOLD_AND_WIDGETS_NOTES.md** |
 | Navigator demo copy-paste (second screen + HomePage button) | **demo-snippets/navigator-demo/** |
 | Add Student UI (form) copy-paste | **demo-snippets/add-student-ui/** or **complete-solution/lib/screens/add_student_screen.dart** |
 | General Flutter structure, ListView, form, navigation | **STUDENT_DEVELOPMENT_GUIDE.md** |
