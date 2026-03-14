@@ -56,3 +56,14 @@ For the hands-on part of the session, use the **week2-group-activity** folder:
 
 - **Instructor:** **week2-group-activity/week2-session-guide.md** – timing, group–task mapping, tips.
 - **Groups 1–8:** **week2-group-activity/week2-group-1.md** … **week2-group-8.md** – one task per group (branch, change, commit, push, PR, CI).
+
+---
+
+## Student guidelines and reference solution
+
+In **week2-guideline** you will find:
+
+- **week2-guideline/STUDENT_DEVELOPMENT_GUIDE.md** – Project structure, screens, ListView, model, form, navigation, Git workflow, and what to do if stuck.
+- **week2-guideline/GROUP_TASKS.md** – Pointer to group activity task files.
+- **week2-guideline/CI_EXPLANATION.md** – Short CI pointer (full docs in repo root).
+- **week2-guideline/complete-solution/** – Reference solution (Student Management App) with copy-paste instructions and files. **This folder is on the `week2-solution` branch only.** See **complete-solution/README.md** for paste order.
