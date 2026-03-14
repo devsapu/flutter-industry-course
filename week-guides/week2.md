@@ -1,53 +1,49 @@
-# Week 2 – Flutter UI Fundamentals
+# Week 2 – Git, GitHub, CI & Flutter basics
 
 **Branch:** `week-2`
 
 ## Learning Objectives
 
-- Widget tree and composition
-- StatelessWidget vs StatefulWidget
-- Layout: Row, Column, Expanded, Stack
-- Reusable UI components
-- Forms and validation
+- **Git workflow** – branching, commits, pull requests
+- **GitHub repositories** – cloning, collaboration
+- **GitHub Actions (CI)** – automated checks on push/PR
+- **Basic Flutter development** – run the app and understand structure
+- **Writing simple tests** – widget tests with `testWidgets`, `find`, `expect`
+- **Professional repository structure** – `.github/workflows` and documentation
 
 ## Teaching Flow
 
-1. **Whiteboard:** Widget tree; Stateless vs Stateful
-2. **Live coding:** Build:
-   - Login screen (email + password, basic validation)
-   - Task list screen (list of tasks)
-   - Task card widget (reusable)
-3. Use: `Column`, `Row`, `Expanded`, `ListView`, `Form`, `TextFormField`
+1. **Git & GitHub:** Clone repo, create a feature branch, make a small change, commit, push, open a PR.
+2. **CI demo:** Show the GitHub **Actions** tab and how CI runs on the PR.
+3. **Repo tour:** `README.md`, `CONTRIBUTING.md`, `CI_EXPLANATION.md`, `.github/workflows/flutter-ci.yml`.
+4. **Flutter basics:** Run the app; explain `pubspec.yaml`, `lib/main.dart`, and `home_page.dart`.
+5. **Testing basics:** Open `test/widget_test.dart`; explain `pumpWidget`, `find`, `expect`; run `flutter test`.
 
 ## Repo Structure (Week 2)
 
 ```
-lib/
-├── main.dart
-├── screens/
-│   ├── login_screen.dart
-│   └── task_list_screen.dart
-├── widgets/
-│   └── task_card.dart
-└── home_page.dart  (or navigation from main)
+.github/workflows/
+  flutter-ci.yml
+task_manager_app/
+  lib/
+  test/
+README.md
+CONTRIBUTING.md
+CI_EXPLANATION.md
 ```
-
-## Key Concepts
-
-- **StatelessWidget** – no mutable state
-- **StatefulWidget** – state that can change; `setState()`
-- **Layout:** Row, Column, Expanded, Stack
-- **Form** – `GlobalKey<FormState>`, validator callbacks
 
 ## Student Exercises
 
-- Add a “Forgot password?” link on the login screen
-- Style the task card (e.g. color by completion status)
-- Add a simple form to “Create task” (title only)
+- Create a branch, change a text in the app, open a PR, and confirm CI runs and passes.
+- Add one more `expect(...)` assertion to `test/widget_test.dart` and run `flutter test`.
+- Read `CI_EXPLANATION.md` and summarize CI in 3–5 sentences.
 
 ## Check Out This Week
 
 ```bash
 git checkout week-2
-cd task_manager_app && flutter pub get && flutter run
+cd task_manager_app
+flutter pub get
+flutter run
+flutter test
 ```

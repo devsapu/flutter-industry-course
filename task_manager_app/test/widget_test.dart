@@ -1,30 +1,26 @@
-// This is a basic Flutter widget test.
+// Simple Flutter widget test – demonstrates how widget tests work.
 //
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+// Widget tests:
+// 1. Build a widget (or the whole app) with tester.pumpWidget()
+// 2. Use find to locate widgets (by text, icon, type, etc.)
+// 3. Use expect with matchers like findsOneWidget, findsNothing
+// 4. Optionally interact: tester.tap(), tester.enterText(), then pump()
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:task_manager_app/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('App shows Task Manager title and welcome message',
+      (WidgetTester tester) async {
     await tester.pumpWidget(const TaskManagerApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // AppBar title from HomePage.
+    expect(find.text('Task Manager'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Body text from HomePage.
+    expect(find.text('Welcome to Task Manager'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Other useful matchers: findsNothing, findsWidgets, findsNWidgets(2)
   });
 }

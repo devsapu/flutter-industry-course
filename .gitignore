@@ -13,3 +13,6 @@ task_manager_app/.flutter-plugins-dependencies
 # OS
 .DS_Store
 Thumbs.db
+
+# Node / npm
+package-lock.json
