@@ -5,7 +5,7 @@
 This guide helps students implement features for the **Student Management System App**.  
 If you get stuck, follow the guidelines below.
 
-**Session order:** Do **Navigator first** (**NAVIGATOR_NOTES.md** and **demo-snippets/navigator-demo/**), then use this guide for screens, form, and navigation. See **LESSON_PLAN.md** for the full lesson plan.
+**Session order:** Do **Introduction to Dart first** (**INTRODUCTION_TO_DART.md**), then **Navigator** (**NAVIGATOR_NOTES.md** and **demo-snippets/navigator-demo/**), then use this guide for screens, form, and navigation. See **LESSON_PLAN.md** for the full lesson plan.
 
 ---
 

@@ -1,6 +1,6 @@
 # Week 2 – Lesson Plan (Flutter + Navigator + Add Student UI)
 
-This **lesson plan** gives the recommended order for the session: **Navigator first**, then **Add Student UI**. You can follow it while sharing the repo on screen — students see navigation concepts before building the form.
+This **lesson plan** gives the recommended order for the session: **Dart basics first**, then **Navigator**, then **Add Student UI**. You can follow it while sharing the repo on screen.
 
 ---
 
@@ -11,7 +11,23 @@ This **lesson plan** gives the recommended order for the session: **Navigator fi
 
 ---
 
-## Phase 1: Navigator (teach first) — ~15–20 min
+## Phase 0: Introduction to Dart (very first) — ~10–15 min
+
+**Goal:** Enough Dart to read and write simple Flutter code (variables, types, functions, classes, `const`).
+
+- **Notes:** **INTRODUCTION_TO_DART.md**.
+- Cover briefly:
+  - Variables and types (`String`, `int`, `bool`, `var`, `final`).
+  - Functions (return type, named parameters – as used in widgets).
+  - Classes and constructors (e.g. `Student`, and that widgets are classes like `Text(...)`).
+  - **`const`** – when to use it and when not (e.g. no `const` if there’s an `onPressed` callback).
+  - **List** – `children: [ ... ]` is a list of widgets.
+- You don’t need to do every section in depth; focus on what they’ll see in **main.dart** and in widgets (named params, `const`, `child`/`children`).
+- Then move to Phase 1 (Navigator).
+
+---
+
+## Phase 1: Navigator — ~15–20 min
 
 **Goal:** Understand **stack**, **push**, and **pop** before building any new UI.
 
@@ -77,6 +93,7 @@ This **lesson plan** gives the recommended order for the session: **Navigator fi
 
 | What you need | File or folder |
 |---------------|-----------------|
+| **Dart basics** (variables, types, functions, classes, const) – do first | **INTRODUCTION_TO_DART.md** |
 | Navigator theory + minimal demo code | **NAVIGATOR_NOTES.md** |
 | Scaffold parameters, child vs children, layout pattern | **SCAFFOLD_AND_WIDGETS_NOTES.md** |
 | Navigator demo copy-paste (second screen + HomePage button) | **demo-snippets/navigator-demo/** |
@@ -93,9 +110,10 @@ This **lesson plan** gives the recommended order for the session: **Navigator fi
 | Time | Activity |
 |------|----------|
 | 0:00 | Recap Git/CI if needed; switch to Flutter. |
-| 0:05 | **Phase 1:** Navigator (stack, push, pop) + minimal demo (second_screen + HomePage button). |
-| 0:22 | **Phase 2:** Add Student UI (Scaffold, form, pop); then wire from dashboard or HomePage. |
-| 0:45 | **Phase 3 (optional):** Show full solution paste order or let groups continue. |
+| 0:05 | **Phase 0:** Introduction to Dart (**INTRODUCTION_TO_DART.md**) – variables, types, functions, classes, const, List. |
+| 0:18 | **Phase 1:** Navigator (stack, push, pop) + minimal demo (second_screen + HomePage button). |
+| 0:35 | **Phase 2:** Add Student UI (Scaffold, form, pop); then wire from dashboard or HomePage. |
+| 0:58 | **Phase 3 (optional):** Show full solution paste order or let groups continue. |
 | 1:00+ | Group tasks (branch, change, PR, CI) as in **week2-session-guide.md**. |
 
-You can shorten Phase 2 if everyone is comfortable and use the complete-solution paste order instead.
+You can shorten Phase 0 or Phase 2 if needed; Phase 0 can be a quick “Dart in 5 min” if time is tight.
