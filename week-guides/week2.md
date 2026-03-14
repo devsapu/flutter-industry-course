@@ -17,7 +17,9 @@
 2. **CI demo:** Show the GitHub **Actions** tab and how CI runs on the PR.
 3. **Repo tour:** `README.md`, `CONTRIBUTING.md`, `CI_EXPLANATION.md`, `.github/workflows/flutter-ci.yml`.
 4. **Flutter basics:** Run the app; explain `pubspec.yaml`, `lib/main.dart`, and `home_page.dart`.
-5. **Testing basics:** Open `test/widget_test.dart`; explain `pumpWidget`, `find`, `expect`; run `flutter test`.
+5. **Navigator (teach first):** Use **week2-guideline/NAVIGATOR_NOTES.md** and **demo-snippets/navigator-demo/** to explain push/pop and do a minimal second-screen demo.
+6. **Add Student UI:** Build the form screen (Scaffold, TextFields, button with `Navigator.pop`); use **demo-snippets/add-student-ui/** or **STUDENT_DEVELOPMENT_GUIDE.md**.
+7. **Testing basics:** Open `test/widget_test.dart`; explain `pumpWidget`, `find`, `expect`; run `flutter test`.
 
 ## Repo Structure (Week 2)
 
@@ -63,6 +65,11 @@ For the hands-on part of the session, use the **week2-group-activity** folder:
 
 In **week2-guideline** you will find:
 
+- **week2-guideline/INSTRUCTOR_TEACHING_PATH.md** – **Recommended teaching order:** Navigator first, then Add Student UI. Timings and pointers to all notes and demo files.
+- **week2-guideline/NAVIGATOR_NOTES.md** – Navigator concepts (stack, push, pop) and a minimal copy-paste demo (second screen + button on HomePage). Use **before** Add Student UI.
+- **week2-guideline/demo-snippets/** – Copy-paste files for live demo:
+  - **navigator-demo/** – `second_screen.dart` and snippet to add a "Go to Second Screen" button on HomePage.
+  - **add-student-ui/** – Full `add_student_screen.dart` (form + button that pops).
 - **week2-guideline/STUDENT_DEVELOPMENT_GUIDE.md** – Project structure, screens, ListView, model, form, navigation, Git workflow, and what to do if stuck.
 - **week2-guideline/GROUP_TASKS.md** – Pointer to group activity task files.
 - **week2-guideline/CI_EXPLANATION.md** – Short CI pointer (full docs in repo root).
