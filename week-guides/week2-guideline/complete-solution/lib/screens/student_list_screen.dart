@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/student.dart';
-
-final List<Student> sampleStudents = [
-  const Student(name: 'John Doe', id: 'S001', course: 'CS'),
-  const Student(name: 'Jane Smith', id: 'S002', course: 'IT'),
-];
+import '../data/student_data.dart';
+import 'student_details_screen.dart';
 
 class StudentListScreen extends StatelessWidget {
   const StudentListScreen({super.key});
@@ -15,13 +12,29 @@ class StudentListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Students'),
       ),
-      body: ListView.builder(
-        itemCount: sampleStudents.length,
-        itemBuilder: (context, index) {
-          final student = sampleStudents[index];
-          return ListTile(
-            title: Text(student.name),
-            subtitle: Text('${student.id} · ${student.course}'),
+      body: ValueListenableBuilder<List<Student>>(
+        valueListenable: studentsNotifier,
+        builder: (context, students, _) {
+          if (students.isEmpty) {
+            return const Center(child: Text('No students yet'));
+          }
+          return ListView.builder(
+            itemCount: students.length,
+            itemBuilder: (context, index) {
+              final student = students[index];
+              return ListTile(
+                title: Text(student.name),
+                subtitle: Text('${student.id} · ${student.course}'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StudentDetailsScreen(student: student),
+                    ),
+                  );
+                },
+              );
+            },
           );
         },
       ),

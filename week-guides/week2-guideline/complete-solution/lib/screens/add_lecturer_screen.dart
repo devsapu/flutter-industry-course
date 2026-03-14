@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import '../models/student.dart';
-import '../data/student_data.dart';
+import '../models/lecturer.dart';
+import '../data/lecturer_data.dart';
 
-class AddStudentScreen extends StatefulWidget {
-  const AddStudentScreen({super.key});
+class AddLecturerScreen extends StatefulWidget {
+  const AddLecturerScreen({super.key});
 
   @override
-  State<AddStudentScreen> createState() => _AddStudentScreenState();
+  State<AddLecturerScreen> createState() => _AddLecturerScreenState();
 }
 
-class _AddStudentScreenState extends State<AddStudentScreen> {
+class _AddLecturerScreenState extends State<AddLecturerScreen> {
   final _nameController = TextEditingController();
   final _idController = TextEditingController();
   final _emailController = TextEditingController();
-  final _courseController = TextEditingController();
+  final _departmentController = TextEditingController();
 
   @override
   void dispose() {
     _nameController.dispose();
     _idController.dispose();
     _emailController.dispose();
-    _courseController.dispose();
+    _departmentController.dispose();
     super.dispose();
   }
 
@@ -28,14 +28,14 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
     final name = _nameController.text.trim();
     final id = _idController.text.trim();
     final email = _emailController.text.trim();
-    final course = _courseController.text.trim();
-    if (name.isEmpty || id.isEmpty || email.isEmpty || course.isEmpty) {
+    final department = _departmentController.text.trim();
+    if (name.isEmpty || id.isEmpty || email.isEmpty || department.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please fill all fields')),
       );
       return;
     }
-    addStudent(Student(name: name, id: id, email: email, course: course));
+    addLecturer(Lecturer(name: name, id: id, email: email, department: department));
     if (mounted) Navigator.pop(context);
   }
 
@@ -43,7 +43,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Student'),
+        title: const Text('Add Lecturer'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -51,12 +51,12 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
           children: [
             TextField(
               controller: _nameController,
-              decoration: const InputDecoration(labelText: 'Student Name'),
+              decoration: const InputDecoration(labelText: 'Lecturer Name'),
             ),
             const SizedBox(height: 16),
             TextField(
               controller: _idController,
-              decoration: const InputDecoration(labelText: 'Student ID'),
+              decoration: const InputDecoration(labelText: 'Lecturer ID'),
             ),
             const SizedBox(height: 16),
             TextField(
@@ -66,13 +66,13 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
             ),
             const SizedBox(height: 16),
             TextField(
-              controller: _courseController,
-              decoration: const InputDecoration(labelText: 'Course'),
+              controller: _departmentController,
+              decoration: const InputDecoration(labelText: 'Department'),
             ),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: _submit,
-              child: const Text('Add Student'),
+              child: const Text('Add Lecturer'),
             ),
           ],
         ),
