@@ -140,7 +140,82 @@ Run the app: tap "Go to Second Screen" → new screen appears (push). Tap "Go Ba
 
 ---
 
-## 6. After this: Add Student UI
+## 6. Wiring in main.dart: initial screen and (optional) named routes
+
+The **main.dart** file configures the app’s **first screen** and, if you use them, **named routes**. Both live on **MaterialApp**.
+
+### 6.1 First screen only: use `home`
+
+For a single starting screen (e.g. Week 2 Task Manager), set **`home`**:
+
+```dart
+MaterialApp(
+  title: 'Task Manager',
+  theme: ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+    useMaterial3: true,
+  ),
+  home: const HomePage(),   // First screen the user sees
+);
+```
+
+- **`home`** – The widget shown when the app starts (bottom of the stack).
+- You still use **Navigator.push** / **Navigator.pop** from that screen to go to others.
+
+### 6.2 Named routes: use `initialRoute` and `routes`
+
+When you have several screens and want to refer to them by **name** (e.g. `/`, `/add`, `/students`), use **`initialRoute`** and **`routes`** instead of **`home`**:
+
+```dart
+MaterialApp(
+  title: 'Student Management System',
+  theme: ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+    useMaterial3: true,
+  ),
+  initialRoute: '/',       // Which route is the first screen
+  routes: {
+    '/': (context) => const StudentDashboardScreen(),
+    '/students': (context) => const StudentListScreen(),
+    '/add': (context) => const AddStudentScreen(),
+  },
+);
+```
+
+- **`initialRoute`** – The **name** of the first route (e.g. `'/'` = dashboard).
+- **`routes`** – Map of **route name → screen**. When you push a named route, Flutter looks up the name here and builds that screen.
+
+**Important:** If you use **`routes`**, do **not** set **`home`**. Use **either** `home` **or** `initialRoute` + `routes`, not both.
+
+### 6.3 Going to a screen by name: pushNamed
+
+With named routes you can push by **name** instead of building the widget yourself:
+
+```dart
+// Instead of:
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const AddStudentScreen()),
+);
+
+// You can write:
+Navigator.pushNamed(context, '/add');
+```
+
+**Pop** is the same: **`Navigator.pop(context)`** (no name needed).
+
+### 6.4 Summary
+
+| Approach        | Use when                         | In main.dart                          |
+|----------------|-----------------------------------|---------------------------------------|
+| **`home`**     | One starting screen, push others  | `home: const HomePage()`              |
+| **Named routes** | Multiple “entry” screens by name | `initialRoute: '/'` and `routes: { ... }` |
+
+For the **minimal demo** (Section 5), **`home: const HomePage()`** is enough. For the **full Student Management app**, you can switch to **`initialRoute`** and **`routes`** and use **pushNamed** when you wire the dashboard and Add Student screen.
+
+---
+
+## 7. After this: Add Student UI
 
 Once students understand push and pop:
 
