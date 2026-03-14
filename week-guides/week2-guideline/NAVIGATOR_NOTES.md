@@ -149,4 +149,4 @@ Once students understand push and pop:
 
 The same Navigator concepts apply; the Add Student screen is just a more useful "second screen" with a form.
 
-See **INSTRUCTOR_TEACHING_PATH.md** for the full demo order and **STUDENT_DEVELOPMENT_GUIDE.md** (Section 7) for navigation in the Student Management app.
+See **LESSON_PLAN.md** for the full lesson plan and **STUDENT_DEVELOPMENT_GUIDE.md** (Section 7) for navigation in the Student Management app.

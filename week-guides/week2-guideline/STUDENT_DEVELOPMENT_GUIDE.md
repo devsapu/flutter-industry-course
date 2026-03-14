@@ -5,7 +5,7 @@
 This guide helps students implement features for the **Student Management System App**.  
 If you get stuck, follow the guidelines below.
 
-**Instructors:** Teach **Navigator first** using **NAVIGATOR_NOTES.md** and **demo-snippets/navigator-demo/**, then use this guide for screens, form, and navigation. See **INSTRUCTOR_TEACHING_PATH.md** for the full demo order.
+**Session order:** Do **Navigator first** (**NAVIGATOR_NOTES.md** and **demo-snippets/navigator-demo/**), then use this guide for screens, form, and navigation. See **LESSON_PLAN.md** for the full lesson plan.
 
 ---
 

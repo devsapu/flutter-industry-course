@@ -65,7 +65,7 @@ For the hands-on part of the session, use the **week2-group-activity** folder:
 
 In **week2-guideline** you will find:
 
-- **week2-guideline/INSTRUCTOR_TEACHING_PATH.md** – **Recommended teaching order:** Navigator first, then Add Student UI. Timings and pointers to all notes and demo files.
+- **week2-guideline/LESSON_PLAN.md** – **Lesson plan** for the session: Navigator first, then Add Student UI. Timings and pointers to all notes and demo files (good to follow when sharing the repo on screen).
 - **week2-guideline/NAVIGATOR_NOTES.md** – Navigator concepts (stack, push, pop) and a minimal copy-paste demo (second screen + button on HomePage). Use **before** Add Student UI.
 - **week2-guideline/demo-snippets/** – Copy-paste files for live demo:
   - **navigator-demo/** – `second_screen.dart` and snippet to add a "Go to Second Screen" button on HomePage.
