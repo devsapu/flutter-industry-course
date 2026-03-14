@@ -1,0 +1,16 @@
+=== ADD TO TOP OF lib/home_page.dart (imports) ===
+import 'second_screen.dart';
+
+=== ADD INSIDE Column children, AFTER the last Text(...) and BEFORE the closing ], ===
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SecondScreen(),
+                  ),
+                );
+              },
+              child: const Text('Go to Second Screen'),
+            ),
